@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Game Engine</title>
+
+    <link rel="stylesheet" href="main_style.css">
+    
+    <link rel="stylesheet" href="theme_style.css">
+</head>
+<body>
+
+    <video id="background-media" class="fullscreen-bg" autoplay muted loop playsinline></video>
+
+    <div id="status-bar">
+        <div id="progress-info">Carregando Jogo...</div>
+        <div id="score-info">Pontos: 0</div>
+    </div>
+
+    <div id="timers-bar">
+        <div id="theme-timer" class="timer-group">
+            <span>Tema:</span>
+            <div id="theme-timer-visual" class="timer-visual">
+                <div class="timer-visual-inner"></div>
+            </div>
+            <span id="theme-timer-label">--</span>
+        </div>
+        <div id="question-timer" class="timer-group">
+            <span>Pergunta:</span>
+            <div id="question-timer-visual" class="timer-visual">
+                <div class="timer-visual-inner"></div>
+            </div>
+            <span id="question-timer-label">--</span>
+        </div>
+    </div>
+
+    <div id="player-container">
+        <h1>Prompt Game</h1>
+        <input type="text" id="player-name" placeholder="Digite seu nome">
+        <button id="start-game" class="btn">Iniciar</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        </div>
+
+    <div id="analysis-module" style="display: none;">
+        <div class="analysis-panel">
+            <h2>Desafio Final</h2>
+            <p class="briefing">Carregando briefing...</p>
+        </div>
+        <div class="analysis-panel">
+            <h2>Seu Prompt</h2>
+            <textarea placeholder="Digite seu prompt aqui..."></textarea>
+            <button id="analyze-prompt" class="btn">Analisar</button>
+        </div>
+    </div>
+
+
+    <script src="ui.js"></script>
+    
+    <script src="engine.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Define qual tema carregar. Como o config.json está na mesma pasta, o caminho é direto.
+            const themeConfigPath = 'config.json';
+            
+            // Cria a instância do motor, passando o caminho do tema e o objeto UI
+            const game = new GameEngine(themeConfigPath, UI);
+            
+            // Inicia o motor. Ele vai carregar o config e preparar a tela inicial.
+            game.init();
+        });
+    </sCRIPT>
+
+</body>
+</html>
