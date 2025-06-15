@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prompt Game Engine</title>
 
-    <link rel="stylesheet" href="main_style.css">
-    
-    <link rel="stylesheet" href="theme_style.css">
+    <link rel="stylesheet" href="engine/main_style.css">
+<link rel="stylesheet" href="themes/default/theme_style.css">
 </head>
 <body>
 
@@ -37,12 +36,16 @@
 
     <div id="player-container">
         <h1>Prompt Game</h1>
-        <input type="text" id="player-name" placeholder="Digite seu nome">
-        <button id="start-game" class="btn">Iniciar</button>
+        <div style="display: flex; flex-direction: column; gap: 18px; align-items: center; margin-top: 32px; margin-bottom: 32px;">
+            <input type="text" id="player-name" placeholder="Digite seu nome" style="padding: 12px 18px; border-radius: 24px; border: none; font-size: 1.1rem; width: 260px; text-align: center;">
+            <button id="start-game" class="btn" style="margin-top: 8px;">Iniciar</button>
+        </div>
     </div>
 
     <div id="game-container" style="display: none;">
-        </div>
+        <div id="phase-title" style="margin-bottom: 32px; font-size: 2rem;"></div>
+        <!-- Flashcards e conteúdo da fase aparecem aqui -->
+    </div>
 
     <div id="analysis-module" style="display: none;">
         <div class="analysis-panel">
@@ -57,14 +60,13 @@
     </div>
 
 
-    <script src="ui.js"></script>
-    
-    <script src="engine.js"></script>
+    <script src="engine/ui.js"></script>
+    <script src="engine/engine.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Define qual tema carregar. Como o config.json está na mesma pasta, o caminho é direto.
-            const themeConfigPath = 'config.json';
+            const themeConfigPath = 'themes/default/config.json';
             
             // Cria a instância do motor, passando o caminho do tema e o objeto UI
             const game = new GameEngine(themeConfigPath, UI);

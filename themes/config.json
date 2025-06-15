@@ -1,0 +1,104 @@
+{
+  "themeName": "Prompt Game: Adapte-ou-Morra",
+  "themeStyle": "themes/default/theme_style.css",
+  "assetsPath": "themes/default/assets/",
+  "phases": [
+    {
+      "phaseTitle": "Fase 1: O QUÊ (A Definição)",
+      "backgroundVideo": "phase1_bg.mp4",
+      "questions": [
+        {
+          "type": "flashcard",
+          "video": "video01.mp4",
+          "question": "O que é o elemento 'Contexto' em um prompt?",
+          "answer": "É a informação de fundo que situa a IA sobre o cenário, o público e o objetivo."
+        },
+        {
+          "type": "flashcard",
+          "video": "video02.mp4",
+          "question": "O que é o elemento 'Tarefa'?",
+          "answer": "É a ação específica e clara que você quer que a IA execute."
+        }
+      ]
+    },
+    {
+      "phaseTitle": "Fase 2: COMO (A Estrutura)",
+      "backgroundVideo": "phase2_bg.mp4",
+      "questions": [
+        {
+          "type": "flashcard",
+          "video": "video03.mp4",
+          "question": "Como você define o 'Tom' de um prompt (ex: formal, divertido)?",
+          "answer": "Usando adjetivos e exemplos. Ex: 'Escreva em um tom profissional e didático'."
+        },
+        {
+          "type": "flashcard",
+          "video": "video04.mp4",
+          "question": "Como a 'Persona' da IA afeta a resposta?",
+          "answer": "Define o estilo, o vocabulário e a perspectiva da resposta. Ex: 'Aja como um cientista'."
+        }
+      ]
+    },
+    {
+      "phaseTitle": "Fase 3: QUANDO (O Timing)",
+      "backgroundVideo": "phase3_bg.mp4",
+      "questions": [
+        {
+          "type": "flashcard",
+          "video": "video05.mp4",
+          "question": "Quando é crucial ser extremamente específico no seu pedido à IA?",
+          "answer": "Quando você precisa de um resultado técnico, com formato e dados precisos."
+        },
+        {
+          "type": "flashcard",
+          "video": "video06.mp4",
+          "question": "E quando você deve dar mais liberdade criativa para a IA?",
+          "answer": "Quando você está buscando ideias, brainstorming ou conceitos artísticos."
+        }
+      ]
+    },
+    {
+      "phaseTitle": "Fase 4: ONDE (A Aplicação)",
+      "backgroundVideo": "phase4_bg.mp4",
+      "questions": [
+        {
+          "type": "flashcard",
+          "video": "video07.mp4",
+          "question": "Onde você usaria um prompt estilo 'passo a passo'?",
+          "answer": "Para gerar tutoriais, receitas, ou qualquer processo que exija uma sequência lógica."
+        },
+        {
+          "type": "flashcard",
+          "video": "video08.mp4",
+          "question": "Onde a definição do 'formato de saída' é mais importante?",
+          "answer": "Ao gerar código, tabelas, JSON, ou qualquer texto que precise ser lido por outro sistema."
+        }
+      ]
+    },
+    {
+      "phaseTitle": "Fase 5: PORQUÊ (A Intenção)",
+      "backgroundVideo": "phase5_bg.mp4",
+      "questions": [
+        {
+          "type": "flashcard",
+          "video": "video09.mp4",
+          "question": "Por que é vital definir o 'objetivo final' do seu prompt?",
+          "answer": "Para garantir que a resposta da IA seja útil e alinhada com seu propósito real."
+        },
+        {
+          "type": "flashcard",
+          "video": "video10.mp4",
+          "question": "Por que refinar e testar um prompt várias vezes melhora o resultado?",
+          "answer": "Porque cada iteração te ajuda a entender como a IA 'pensa' e a comunicar sua intenção com mais clareza."
+        }
+      ]
+    },
+    {
+      "phaseTitle": "Desafio Final: O CHEFÃO",
+      "type": "analysisModule",
+      "backgroundVideo": "final_boss_bg.mp4",
+      "briefing": "Você precisa criar um prompt para um vídeo de review de 30 segundos para o 'Arara Pocket Spot'. O vídeo deve ter um tom nostálgico, ser direcionado a cineastas independentes e destacar a precisão de cor (CRI alto) do produto.",
+      "evaluationCriteria": ["público-alvo", "emoção", "formato", "destaque técnico"]
+    }
+  ]
+}

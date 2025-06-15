@@ -1,0 +1,74 @@
+/* =================================
+   TEMA: PROMPT GAME
+   theme_style.css (Estilo Específico)
+   ================================= */
+
+/* --- Importando a fonte do tema --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+/* --- Sobrescrevendo o main_style.css --- */
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Aplicando a fonte do tema */
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+#status-bar {
+    border-bottom: 2px solid #ff9800; /* Cor da borda do HUD */
+}
+
+#score-info {
+    color: #fff176; /* Cor do placar */
+}
+
+.timer-visual-inner {
+    /* Gradiente da FiveCodes para a barra do timer */
+    background: linear-gradient(90deg, #ff9800 0%, #ff5eae 100%);
+}
+
+/* --- Estilizando componentes com a identidade do tema --- */
+
+.btn {
+    /* Aplicando o gradiente principal nos botões genéricos */
+    background: linear-gradient(90deg, #ff9800 0%, #ff5eae 100%);
+}
+
+.btn:hover {
+    color: #232326;
+    background: linear-gradient(90deg, #ffb347 0%, #ff5eae 100%);
+}
+
+.flashcard {
+    /* Dimensões e Espaçamento */
+    padding: 24px;
+    border-radius: 16px; /* Bordas arredondadas */
+    min-width: 300px;
+    max-width: 80vw;
+    min-height: 200px;
+    
+    /* Aparência Visual */
+    background-color: rgba(41, 41, 44, 0.85); /* #29292c com um pouco de transparência */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: #fff;
+
+    /* Layout Interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    /* Transição para animações */
+    transition: all 0.3s ease;
+}
+
+.flashcard.flipped {
+    animation: flashcard-flip 0.3s;
+    box-shadow: 0 0 20px #ff5eae;
+    background: linear-gradient(90deg, #ff9800 0%, #ff5eae 100%);
+    color: #232326;
+}
